@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+
+<body>
+
+
+<script type="text/javascript">
+	function myfone() {
+		var height=document.getElementById("height").value;
+		var weight=document.getElementById("weight").value;/*getElementById不要加s因為變數只有一個*/
+		var bmi=height/(weight*weight);
+
+		document.getElementById('BMI').innerHTML=bmi;
+	}
+</script>
+
+<form>身高<input type="text" id="height"></form><!--用id不要用name-->
+<form>體重<input type="text" id="weight"></form>
+<button type="button" onclick="myfone()">計算BMI</button>
+<p id="BMI"></p>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+
+	<div id="charts_div">
+	<script>
+	google.charts.load('current', {packages: ['corechart', 'bar']});
+	google.charts.setOnLoadCallback(drawBasic);
+	function drawBasic(){
+		var data = new google.visualization.arrayToDataTable([
+			['Time', 'Value'],
+			['8 AM', 1], ['9 AM', 2], ['10 AM', 3], ['11 AM', 4], ['12 AM', 5]
+			]);
+		var options = {
+		title: 'Value Throughout the Day',
+		hAxis: { title: 'Time of Day'},
+		vAxis: {title: 'Value'}
+	};
+
+	var chart= new google.visualization.ColumnChart(document.getElementById('charts_div'));/*div名字要拿對*/
+	chart.draw(data, options);
+	}
+	</script>
+	</div>
+
+</body>
+</html>
